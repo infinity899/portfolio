@@ -19,8 +19,9 @@ export default {
 
 html,
 body {
-  position: fixed;
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 #app {
