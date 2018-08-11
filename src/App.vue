@@ -1,9 +1,6 @@
 <template>
   <div id="app">
     <router-view/>
-    <vue-particles color="#008ae6"
-                   :particlesNumber="120"
-    ></vue-particles>
   </div>
 </template>
 
@@ -21,7 +18,7 @@ export default {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: sans-serif, Helvetica, Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
