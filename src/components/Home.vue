@@ -9,7 +9,9 @@
       </div>
       <div class="avatar-about">
         <h2 class="avatar-name">Pirvulescu Andrei</h2>
+        <p class="avatar-description" v-for="description in description"> {{ description }}</p>
       </div>
+      <button class="button-home">Find out more<i class="material-icons">arrow_right_alt</i></button>
     </div>
   </div>
 </template>
@@ -19,7 +21,11 @@ export default {
   name: 'Home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      description: [
+        'software engineer',
+        'avid reader',
+        'dreamer'
+      ]
     }
   }
 }
@@ -34,6 +40,7 @@ export default {
   display: flex;
   flex-direction: column;
   position: absolute;
+  pointer-events: none;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
@@ -59,6 +66,7 @@ export default {
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 2px;
+    margin-bottom: 12px;
 
     &::after {
       background: #FFFFFF;
@@ -68,6 +76,38 @@ export default {
       margin: auto;
       width: 60%;
     }
+  }
+
+  &-description {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+}
+
+.button-home {
+  display: flex;
+  align-items: center;
+  background-color: #008ae6;
+  border-radius: 2px;
+  color: #FFFFFF;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 4px;
+  border: none;
+  text-decoration: none;
+  padding: 8px;
+  cursor: pointer;
+  pointer-events: all;
+
+  &:hover {
+    background-color: #FFFFFF;
+    color: #008ae6;
   }
 }
 
