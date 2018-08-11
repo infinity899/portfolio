@@ -1,17 +1,17 @@
 <template>
   <div class="home">
     <vue-particles color="#008ae6"
-                   :particlesNumber="120"
+                   :particlesNumber="150"
     ></vue-particles>
     <div class="home-container">
       <div class="avatar">
-        <img src="../assets/avatar.png" alt="avatar" class="avatar-image">
+        <img src="../assets/avatar2.png" alt="avatar" class="avatar-image">
       </div>
       <div class="avatar-about">
         <h2 class="avatar-name">Pirvulescu Andrei</h2>
         <p class="avatar-description" v-for="description in description"> {{ description }}</p>
       </div>
-      <button class="button-home">Find out more<i class="material-icons">arrow_right_alt</i></button>
+      <router-link class="button-home" to="/about">Know me<i class="material-icons">arrow_right_alt</i></router-link>
     </div>
   </div>
 </template>
@@ -48,10 +48,13 @@ export default {
 }
 
 .avatar {
+  display: flex;
+  align-items: center;
   border-radius: 50%;
   margin-bottom: 12px;
   overflow: hidden;
   width: 200px;
+  height: 200px;
 
   &-image {
     height: auto;

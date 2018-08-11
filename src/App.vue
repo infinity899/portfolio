@@ -17,6 +17,12 @@ export default {
   margin: 0;
 }
 
+html,
+body {
+  position: fixed;
+  overflow: hidden;
+}
+
 #app {
   font-family: sans-serif, Helvetica, Arial;
   -webkit-font-smoothing: antialiased;
