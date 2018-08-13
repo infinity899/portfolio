@@ -64,7 +64,6 @@ body {
   background-color: #faf9f9;
   box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
   min-height: 50rem;
-  height: 100%;
 }
 
 .content {
