@@ -25,7 +25,8 @@ export default {
         'software engineer',
         'avid reader',
         'dreamer'
-      ]
+      ],
+      containerFlag: false
     }
   }
 }
@@ -51,6 +52,7 @@ export default {
   display: flex;
   align-items: center;
   border-radius: 50%;
+  border: 2px solid #FFFFFF;
   margin-bottom: 12px;
   overflow: hidden;
   width: 200px;

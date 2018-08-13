@@ -1,9 +1,9 @@
 <template>
-<div class="container">
-  <div class="content">
-    <navbar></navbar>
+  <div class="container">
+    <div class="content">
+      <navbar></navbar>
+    </div>
   </div>
-</div>
 </template>
 <script>
   import Navbar from '../components/Navbar.vue'
@@ -19,6 +19,6 @@
   }
 </script>
 <style lang="scss" scoped>
-@import "../scss/variables";
+  @import "../scss/variables";
 
 </style>
