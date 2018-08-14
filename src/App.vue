@@ -14,7 +14,7 @@ export default {
   name: 'App',
   data() {
     return {
-      isVisible: true
+      isVisible: false
     }
   },
   methods: {
