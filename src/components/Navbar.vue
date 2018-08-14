@@ -2,13 +2,13 @@
 <nav class="sidebar">
   <ul class="sidebar-menu">
     <li class="side-nav__item">
-      <router-link class="side-nav__link" to="/about">About Me</router-link>
+      <router-link class="side-nav__link nav-about-me" to="/about">About Me<i class="material-icons">account_circle</i></router-link>
     </li>
     <li class="side-nav__item">
-      <router-link class="side-nav__link" to="/projects">Projects</router-link>
+      <router-link class="side-nav__link nav-projects" to="/projects">Projects<i class="material-icons">work_outline</i></router-link>
     </li>
     <li class="side-nav__item">
-      <router-link class="side-nav__link" to="/contact">Contact</router-link>
+      <router-link class="side-nav__link nav-contact" to="/contact">Contact<i class="material-icons">mail_outline</i></router-link>
     </li>
   </ul>
 </nav>
@@ -66,7 +66,9 @@
       }
 
       &:first-child {
-        margin-top: 32px;
+        @media only screen and (min-width: $bp-medium + 1) {
+          margin-top: $sp-size-xl;
+        }
       }
 
       @media only screen and (max-width: $bp-medium) {
@@ -116,6 +118,16 @@
       @media only screen and (max-width: $bp-small) {
         flex-direction: column;
         padding: 1.5rem .5rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 0;
+      }
+
+      .material-icons {
+        @media only screen and (min-width: $bp-smallest + 1) {
+          display: none;
+        }
       }
     }
   }

@@ -5,7 +5,7 @@
     ></vue-particles>
     <div class="home-container">
       <div class="avatar">
-        <img src="../assets/avatar2.png" alt="avatar" class="avatar-image">
+        <img src="../assets/avatar3.png" alt="avatar" class="avatar-image">
       </div>
       <div class="avatar-about">
         <h2 class="avatar-name">Pirvulescu Andrei</h2>
@@ -59,8 +59,8 @@ export default {
   height: 200px;
 
   &-image {
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
   }
 
   &-about {

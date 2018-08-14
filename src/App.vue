@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <router-view/>
+    <button class="goTop" ref="topButton" v-if="isVisible" @click="backToTop">
+      <i class="material-icons icon-lg">
+        keyboard_arrow_up
+      </i>
+    </button>
   </div>
 </template>
 
@@ -9,7 +14,26 @@ export default {
   name: 'App',
   data() {
     return {
+      isVisible: true
     }
+  },
+  methods: {
+    backToTop() {
+      window.scrollTo(0, 0);
+      console.log(this.$refs.topButton);
+    },
+    initToTopButton() {
+      let backToTopButton = this.$refs.topButton;
+      console.log(backToTopButton);
+      if (window.scrollY > 100) {
+        this.isVisible = true;
+      } else {
+        this.isVisible = false;
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.initToTopButton);
   }
 }
 </script>
@@ -40,6 +64,7 @@ export default {
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 /*Fix IOS bounce bug*/
@@ -69,6 +94,43 @@ body {
 .content {
   display: flex;
   height: 100%;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+.icon-lg {
+  font-size: 32px;
+}
+
+.goTop {
+  border-radius: 5px;
+  background-color: rgb(1,14,27);
+  background-color: rgba(1, 14, 27, .7);
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  display: block;
+  right: 15px;
+  bottom: 15px;
+  border: none;
+  opacity: .8;
+  z-index: 4;
+  .material-icons {
+    color: white;
+    font-size: 24px;
+  }
+
+  &:hover {
+    opacity: 1;
+    background-color: rgb(1,14,27);
+    background-color: rgba(1, 14, 27, .9);
+  }
+}
+
+.isVisible {
+
+  transition: all .4s ease-in;
 }
 
 .sidebar {
@@ -79,6 +141,11 @@ body {
 
   &-menu {
     list-style: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
